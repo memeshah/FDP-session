@@ -19,6 +19,12 @@ pipeline {
                 bat 'mvn test'
             }
         }
+		
+		stage('Docker Login') {
+			steps {
+        bat 'docker login -u memeshah -p Myps@2911'
+			}
+		}
         
         stage('Docker Build') {
             steps {
