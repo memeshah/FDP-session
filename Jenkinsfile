@@ -29,14 +29,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    bat 'docker build -t fdpsession .'
+                    bat 'docker build -t memeshah/fdpsession:latest .'
                 }
             }
         }
 		
 		stage('Push Docker Image') {
             steps {
-                bat 'docker push fdpsession'
+                bat 'docker push memeshah/fdpsession:latest'
             }
         }
         
