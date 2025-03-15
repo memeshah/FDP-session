@@ -23,7 +23,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    bat 'docker build -t FDP-session .'
+                    bat 'docker build -t fdpsession .'
                 }
             }
         }
