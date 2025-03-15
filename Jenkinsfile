@@ -27,6 +27,12 @@ pipeline {
                 }
             }
         }
+		
+		stage('Push Docker Image') {
+            steps {
+                bat 'docker push fdpsession:latest'
+            }
+        }
         
     }
     
